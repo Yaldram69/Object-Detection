@@ -47,3 +47,16 @@ The script takes no arguments and reads from the default webcam (index 0). If th
 - The model detects only the COCO classes. Custom objects need a model trained on your own dataset.
 - The window title is "YOLOv8 Real-time Object Detection".
 - No training code is included.
+
+## Pretrained YOLO weights (not included)
+
+The following off-the-shelf Ultralytics checkpoints were removed from this repository because they are publicly downloadable. The code loads them by name, and Ultralytics downloads them automatically on first use:
+
+- `yolov8n.pt`
+
+```python
+from ultralytics import YOLO
+model = YOLO("yolov8n.pt")  # downloaded automatically if not present
+```
+
+Or download them manually from https://github.com/ultralytics/assets/releases
